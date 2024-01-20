@@ -18,3 +18,5 @@ public:: true
 	- Any block larger than one paragraph (subjective) should be its own page.
 	- Any page longer than two full screens should be split up.
 	- Full sentences should be used when possible.
+	- No orphan pages should *ever* be pushed to production.
+	- All root pages should have a category.
