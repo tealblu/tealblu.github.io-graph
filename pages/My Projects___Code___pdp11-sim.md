@@ -5,6 +5,7 @@ public:: true
 
 - ### Description:
   This is a C program that accurately simulates the PDP-11 computer's assembly language, complete with virtual memory, CPU registers, and a caching system. Input and output are performed through the command line or through files.
+  ![A brief tour of the PDP-11, the most influential minicomputer of all time |  Ars Technica](https://cdn.arstechnica.net/wp-content/uploads/2013/10/unix-creators.jpg)
 - ### Instruction Set:
   The PDP-11 instruction set contains 12 basic operations to be performed on memory addresses. Operands are represented by 16-bit words, with the leftmost bits containing the opcode and the rightmost bits containing source, destination, and register addresses. In addition, many other operands are supported, allowing for a wide variety of operations to be performed.
 - ### Architecture:
