@@ -20,3 +20,4 @@ public:: true
 	- Full sentences should be used when possible.
 	- No orphan pages should *ever* be pushed to production.
 	- All root pages should have a category.
+	- No child pages should have a category.
