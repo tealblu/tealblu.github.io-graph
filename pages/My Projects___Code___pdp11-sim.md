@@ -30,6 +30,10 @@ public:: true
 	  The Program Counter has four addressing modes, and the Stack has 6 addressing modes, both of which alter the operation of the system in their own way.
 - ### Code Breakdown:
 	- Memory addresses are stored in the following structure:
+		- `int mode` stores the operating mode.
+		- `int reg` stores the register on which the operation is being performed.
+		- `int addr` stores addresses relevant to modes 1-7.
+		- `int value` stores a relevant value.
 		- ```c
 		  /* struct to help organize source and destination operand handling */
 		  typedef struct ap {
@@ -39,59 +43,54 @@ public:: true
 		      int value;
 		  } addr_phrase_t;
 		  ```
-		- int mode stores the operating mode.
-		- `int reg stores the register on which the operation is being performed.
-		- int addr stores addresses relevant to modes 1-7.
-		- int value stores a relevant value.
 	- The following global variables are defined:
-	  ```c
-	  // Global variables
-	  uint16_t memory[MEMSIZE]; // 16-bit memory
-	  uint16_t reg[8] = {0}; // R0-R7
-	  bool n, z, v, c; // Condition codes
-	  
-	  addr_phrase_t src, dst; // Source and destination address phrases
-	  
-	  bool running; // Flag to indicate if the program is running
-	  bool trace = false;
-	  bool verbose = false;
-	  int memory_reads = 0;
-	  int memory_writes = 0;
-	  int inst_fetches = 0;
-	  int inst_execs = 0;
-	  int branch_taken = 0;
-	  int branch_execs = 0;
-	  ```
-		- uint16_t memory[MEMSIZE] represents the simulated global memory, segregated into 16-bit chunks. `MEMSIZE` is a predefined variable that determines the amount of memory available to the system.
-		- uint16_t reg[8] represents the 8 CPU registers, each capable of storing one 16-bit word.
-		- bool n, z, v, c are single-bit condition codes used to indicate the status of the system.
+		- `uint16_t memory[MEMSIZE]` represents the simulated global memory, segregated into 16-bit chunks. `MEMSIZE` is a predefined variable that determines the amount of memory available to the system.
+		- `uint16_t reg[8]` represents the 8 CPU registers, each capable of storing one 16-bit word.
+		- `bool n, z, v, c` are single-bit condition codes used to indicate the status of the system.
 		- All other global variables are used for statistics purposes and do not affect the operation of the system.
+		- ```c
+		  // Global variables
+		  uint16_t memory[MEMSIZE]; // 16-bit memory
+		  uint16_t reg[8] = {0}; // R0-R7
+		  bool n, z, v, c; // Condition codes
+		  
+		  addr_phrase_t src, dst; // Source and destination address phrases
+		  
+		  bool running; // Flag to indicate if the program is running
+		  bool trace = false;
+		  bool verbose = false;
+		  int memory_reads = 0;
+		  int memory_writes = 0;
+		  int inst_fetches = 0;
+		  int inst_execs = 0;
+		  int branch_taken = 0;
+		  int branch_execs = 0;
+		  ```
 	- The following functions are defined:
-	  
-	  ```c
-	  // Function prototypes
-	  void operate(uint16_t instruction);
-	  void get_operand(addr_phrase_t *phrase);
-	  void update_operand(addr_phrase_t *phrase);
-	  void put_operand(addr_phrase_t *phrase);
-	  void add(uint16_t operand);
-	  void asl(uint16_t operand);
-	  void asr(uint16_t operand);
-	  void beq(uint16_t operand);
-	  void bne(uint16_t operand);
-	  void br(uint16_t operand);
-	  void cmp(uint16_t operand);
-	  void halt(uint16_t operand);
-	  void mov(uint16_t operand);
-	  void sob(uint16_t operand);
-	  void sub(uint16_t operand);
-	  void pstats();
-	  void pregs();
-	  ```
-		- operate() takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
-		- get_operand(), update_operand(), and put_operand() all modify the operand.
-		- pstats() and pregs() are defined for development purposes - they print statistics and the values of the registers, respectively.
+		- `operate()` takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
+		- `get_operand()`, `update_operand()`, and `put_operand()` all modify the operand.
+		- `pstats()` and `pregs()` are defined for development purposes - they print statistics and the values of the registers, respectively.
 		- The full code for each of these functions can be seen in the project's [GitHub Repository](https://github.com/tealblu/pdp11-sim)
+		- ```c
+		  // Function prototypes
+		  void operate(uint16_t instruction);
+		  void get_operand(addr_phrase_t *phrase);
+		  void update_operand(addr_phrase_t *phrase);
+		  void put_operand(addr_phrase_t *phrase);
+		  void add(uint16_t operand);
+		  void asl(uint16_t operand);
+		  void asr(uint16_t operand);
+		  void beq(uint16_t operand);
+		  void bne(uint16_t operand);
+		  void br(uint16_t operand);
+		  void cmp(uint16_t operand);
+		  void halt(uint16_t operand);
+		  void mov(uint16_t operand);
+		  void sob(uint16_t operand);
+		  void sub(uint16_t operand);
+		  void pstats();
+		  void pregs();
+		  ```
 - ### Links
 	- [GitHub Repository](https://github.com/tealblu/pdp11-sim)
 	- [What the heck is a PDP-11?](https://en.wikipedia.org/wiki/PDP-11)
