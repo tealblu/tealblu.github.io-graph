@@ -30,19 +30,19 @@ public:: true
 	  The Program Counter has four addressing modes, and the Stack has 6 addressing modes, both of which alter the operation of the system in their own way.
 - ### Code Breakdown:
 	- Memory addresses are stored in the following structure:
-	  ```c
-	  /* struct to help organize source and destination operand handling */
-	  typedef struct ap {
-	      int mode;
-	      int reg;
-	      int addr; /* used only for modes 1-7 */
-	      int value;
-	  } addr_phrase_t;
-	  ```
-		- `int mode` stores the operating mode.
-		- `int reg` stores the register on which the operation is being performed.
-		- `int addr` stores addresses relevant to modes 1-7.
-		- `int value` stores a relevant value.
+		- ```c
+		  /* struct to help organize source and destination operand handling */
+		  typedef struct ap {
+		      int mode;
+		      int reg;
+		      int addr; /* used only for modes 1-7 */
+		      int value;
+		  } addr_phrase_t;
+		  ```
+		- int mode stores the operating mode.
+		- `int reg stores the register on which the operation is being performed.
+		- int addr stores addresses relevant to modes 1-7.
+		- int value stores a relevant value.
 	- The following global variables are defined:
 	  ```c
 	  // Global variables
@@ -62,9 +62,9 @@ public:: true
 	  int branch_taken = 0;
 	  int branch_execs = 0;
 	  ```
-		- `uint16_t memory[MEMSIZE]` represents the simulated global memory, segregated into 16-bit chunks. `MEMSIZE` is a predefined variable that determines the amount of memory available to the system.
-		- `uint16_t reg[8]` represents the 8 CPU registers, each capable of storing one 16-bit word.
-		- `bool n, z, v, c` are single-bit condition codes used to indicate the status of the system.
+		- uint16_t memory[MEMSIZE] represents the simulated global memory, segregated into 16-bit chunks. `MEMSIZE` is a predefined variable that determines the amount of memory available to the system.
+		- uint16_t reg[8] represents the 8 CPU registers, each capable of storing one 16-bit word.
+		- bool n, z, v, c are single-bit condition codes used to indicate the status of the system.
 		- All other global variables are used for statistics purposes and do not affect the operation of the system.
 	- The following functions are defined:
 	  
@@ -88,10 +88,10 @@ public:: true
 	  void pstats();
 	  void pregs();
 	  ```
-		- `operate()` takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
-		- `get_operand()`, `update_operand()`, and `put_operand()` all modify the operand.
-		- `pstats()` and `pregs()` are defined for development purposes - they print statistics and the values of the registers, respectively.
-		- The full code for each of these functions can be seen in the project's [GitHub Repository](https://github.com/tealblu/pdp11-sim).
+		- operate() takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
+		- get_operand(), update_operand(), and put_operand() all modify the operand.
+		- pstats() and pregs() are defined for development purposes - they print statistics and the values of the registers, respectively.
+		- The full code for each of these functions can be seen in the project's [GitHub Repository](https://github.com/tealblu/pdp11-sim)
 - ### Links
 	- [GitHub Repository](https://github.com/tealblu/pdp11-sim)
 	- [What the heck is a PDP-11?](https://en.wikipedia.org/wiki/PDP-11)
