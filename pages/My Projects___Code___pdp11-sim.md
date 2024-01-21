@@ -1,5 +1,4 @@
 date:: 2024-01-21
-category:: projects
 keywords:: code, coding, pdp11, assembly, school
 public:: true
 
