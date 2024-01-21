@@ -5,7 +5,7 @@ public:: true
 
 - ### Description:
   This is a C program that accurately simulates the PDP-11 computer's assembly language, complete with virtual memory, CPU registers, and a caching system. Input and output are performed through the command line or through files.
-- ### Instruction Set
+- ### Instruction Set:
   The PDP-11 instruction set contains 12 basic operations to be performed on memory addresses. Operands are represented by 16-bit words, with the leftmost bits containing the opcode and the rightmost bits containing source, destination, and register addresses. In addition, many other operands are supported, allowing for a wide variety of operations to be performed.
 - ### Architecture:
   The PDP-11 architecture is a 16-bit instruction set architecture developed by Digital Equipment Corporation for use with PDP-11 computers. It was widely used in the 1970s, but grew less popular in the 1980s and afterwards.
