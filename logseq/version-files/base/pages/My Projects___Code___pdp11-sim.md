@@ -28,6 +28,46 @@ public:: true
 	  |7n|Index deferred|@X(Rn)|Rn+X is the address of the address of the operand.|
 	  
 	  The Program Counter has four addressing modes, and the Stack has 6 addressing modes, both of which alter the operation of the system in their own way.
+- ### Code Breakdown:
+	- Memory addresses are stored in the following structure:
+	  ```c
+	  /* struct to help organize source and destination operand handling */
+	  typedef struct ap {
+	      int mode;
+	      int reg;
+	      int addr; /* used only for modes 1-7 */
+	      int value;
+	  } addr_phrase_t;
+	  ```
+		- `int mode` stores the operating mode.
+		- `int reg` stores the register on which the operation is being performed.
+		- `int addr` stores addresses relevant to modes 1-7.
+		- `int value` stores a relevant value.
+	- The following functions are defined:
+	  
+	  ```c
+	  // Function prototypes
+	  void operate(uint16_t instruction);
+	  void get_operand(addr_phrase_t *phrase);
+	  void update_operand(addr_phrase_t *phrase);
+	  void put_operand(addr_phrase_t *phrase);
+	  void add(uint16_t operand);
+	  void asl(uint16_t operand);
+	  void asr(uint16_t operand);
+	  void beq(uint16_t operand);
+	  void bne(uint16_t operand);
+	  void br(uint16_t operand);
+	  void cmp(uint16_t operand);
+	  void halt(uint16_t operand);
+	  void mov(uint16_t operand);
+	  void sob(uint16_t operand);
+	  void sub(uint16_t operand);
+	  void pstats();
+	  void pregs();
+	  ```
+		- `operate()` takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
+		- `get_operand()`, `update_operand()`, and `put_operand()` all modify the operand.
+		- `pstats()` and `pregs()` are defined for development purposes - they print statistics and the values of the registers, respectively.
 - ### Links
 	- [GitHub Repository](https://github.com/tealblu/pdp11-sim)
 	- [What the heck is a PDP-11?](https://en.wikipedia.org/wiki/PDP-11)
