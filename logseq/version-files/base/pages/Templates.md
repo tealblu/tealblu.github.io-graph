@@ -5,7 +5,7 @@ public:: true
 - metadata
   template:: metadata
   template-including-parent:: false
-	- date:: YYYY-MM-DD
+	- date:: <% today %>
 	  category::
 	  keywords::
 	  public:: true

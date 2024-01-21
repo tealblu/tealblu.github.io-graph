@@ -67,9 +67,9 @@ public:: true
 		  int branch_execs = 0;
 		  ```
 	- The following functions are defined:
-		- operate() takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
-		- get_operand(), update_operand(), and put_operand() all modify the operand.
-		- pstats() and pregs() are defined for development purposes - they print statistics and the values of the registers, respectively.
+		- `operate()` takes a 16-bit instruction as its input, interprets it, and performs the corresponding action.
+		- `get_operand()`, `update_operand()`, and `put_operand()` all modify the operand.
+		- `pstats()` and `pregs()` are defined for development purposes - they print statistics and the values of the registers, respectively.
 		- The full code for each of these functions can be seen in the project's [GitHub Repository](https://github.com/tealblu/pdp11-sim)
 		- ```c
 		  // Function prototypes
