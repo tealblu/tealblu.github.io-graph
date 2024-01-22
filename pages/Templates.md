@@ -10,3 +10,7 @@ public:: true
 	  category::
 	  keywords::
 	  public:: true
+- diary
+  template:: diary
+  template-including-parent:: false
+	- #Diaries <% today %> <% time %>:
