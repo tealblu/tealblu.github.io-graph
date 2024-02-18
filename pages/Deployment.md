@@ -11,3 +11,4 @@ public:: true
 	- Create a new commit and push to the remote graph.
 	- Wait a few minutes for Github Actions to run.
 	- Done!
+- {{embed [[deployment flow]]}}
