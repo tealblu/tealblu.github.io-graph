@@ -11,3 +11,4 @@ public:: true
 	- Image Classification AI: [[Image Classification AI]]
 	- Low-Cost Universal Camera Array: [[LUCA]]
 	- Archive website (the website you're on)
+		- Homepage graph view: [[Graph Rendering]]
