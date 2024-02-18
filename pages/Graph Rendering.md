@@ -10,6 +10,7 @@ public:: true
 	- [Logseq codebase overview](https://github.com/logseq/logseq/blob/master/CODEBASE_OVERVIEW.md)
 	- [Article on logseq codebase structure](https://docs.logseq.com/#/page/The%20Refactoring%20Of%20Logseq)
 	- [Logseq built-in renderer](https://github.com/logseq/logseq/blob/master/src/main/frontend/extensions/graph/pixi.cljs)
+	- [Cosma | Installing Cosma (arthurperret.fr)](https://cosma.arthurperret.fr/installing.html)
 - ### Development
 	- `themes/PaperModlayouts/partials/home_info.html` is the template for my home page
 		- I need to figure out how to render a graph in this page
