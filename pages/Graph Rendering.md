@@ -14,7 +14,6 @@ public:: true
 	- `themes/PaperModlayouts/partials/home_info.html` is the template for my home page
 		- I need to figure out how to render a graph in this page
 		- JavaScript parser returns map containing all links
-		  collapsed:: true
 			- ```javascript
 			  import fs from 'fs';
 			  import path from 'path';
@@ -80,4 +79,5 @@ public:: true
 			    'Projects Homepage.md' => [ 'Code Projects' ]
 			  }
 			  ```
--
+		- TODO Remember how to render a d3 image
+		- TODO Write script to render map as linked-node tree
