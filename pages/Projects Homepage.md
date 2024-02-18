@@ -1,6 +1,6 @@
 date:: 2024-01-20
 category:: projects
-keywords:: projects, my projects, code, diy
+keywords:: projects, my projects, code, diy, root
 public:: true
 title:: Projects Homepage
 

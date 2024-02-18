@@ -419,5 +419,5 @@
  :editor/preferred-pasting-file? true
  :journal/page-title-format "yyyy-MM-dd"
  :graph/forcesettings {:charge-range 2300
- :link-dist 100
+ :link-dist 40
  :charge-strength -500}}
