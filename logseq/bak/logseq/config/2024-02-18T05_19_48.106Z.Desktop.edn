@@ -417,4 +417,7 @@
  :ui/show-brackets? false
  :editor/logical-outdenting? true
  :editor/preferred-pasting-file? true
- :journal/page-title-format "yyyy-MM-dd"}
+ :journal/page-title-format "yyyy-MM-dd"
+ :graph/forcesettings {:charge-range 2400
+ :link-dist 180
+ :charge-strength -800}}

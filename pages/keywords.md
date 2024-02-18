@@ -1,1 +1,1 @@
-graph-hide:: true
+exclude-from-graph-view:: true

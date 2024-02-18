@@ -20,7 +20,7 @@
  ;; Define the default journal page template.
  ;; Enter the template name between the quotes.
  :default-templates
- {:journals "metadata"}
+ {:journals "Metadata"}
 
  ;; Set a custom date format for the journal page title.
  ;; Default value: "MMM do, yyyy"
@@ -412,4 +412,12 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :publishing/all-pages-public? true}
+ :publishing/all-pages-public? true
+ :graph/settings {:journal? true}
+ :ui/show-brackets? false
+ :editor/logical-outdenting? true
+ :editor/preferred-pasting-file? true
+ :journal/page-title-format "yyyy-MM-dd"
+ :graph/forcesettings {:charge-range 1400
+ :link-dist 180
+ :charge-strength -800}}
