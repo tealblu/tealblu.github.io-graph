@@ -3,8 +3,12 @@ category:: meta
 keywords:: development, structure, pkm, graph
 public:: true
 
+- ### Current graph state:
 - ### What am I doing?
 	- I am figuring out how to structure this graph.
+		- #+BEGIN_TIP
+		  graph: a structured collection of data consisting of interlinked nodes
+		  #+END_TIP
 	- I am defining a structure now so that it stays organized as it grows.
 	- #+BEGIN_QUOTE
 	  Just a few simple rules can turn chaos into order.
