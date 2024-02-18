@@ -1,6 +1,6 @@
 date:: 2024-01-20
 category:: meta
-keywords:: development, deployment, hugo
+keywords:: development, deployment, hugo, [[Graph Structure]] 
 public:: true
 
 - ### How to deploy to this site:
